@@ -13,7 +13,7 @@ import Foundation
  https://api.themoviedb.org/3/movie/popular?api_key=9d4be65a0a14784f73ea7a1e4f978ea0
  */
 
-enum MovieCategory: Int {
+enum MovieCategory: Int, CaseIterable {
     case upcoming = 0
     case topRated
     case popular
