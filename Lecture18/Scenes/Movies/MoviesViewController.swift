@@ -9,14 +9,14 @@ import UIKit
 
 class MoviesViewController: UIViewController {
     
-    var movieApiManager: MovieAPIManagerProtocol?
+    var apiManager: MovieAPIManagerProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        movieApiManager = MovieAPIManager()
+        apiManager = MovieAPIManager()
         
-        movieApiManager?.fetchMovies(with: .upcoming, completion: { result in
+        apiManager?.fetchMovies(with: .upcoming, completion: { result in
             switch result {
             case .success(let movieResponse):
                 print(movieResponse.movies)
